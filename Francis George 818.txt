@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Future Value Calculator</title>
+<script>
+    function calculate(){    
+    var investment = ParseFloat(document.getElementById("investment").value);
+    var interest =  ParseFloat(document.getElementById("interest").value);
+    var years = ParseFloat(document.getElementById("years").value);
+
+    if(isNaN(investment) || isNaN(interest) || isNaN(years) || (investment<=0) || (interest<=0) || (years<=5))
+    {
+      if(isNaN(investment) || (investment<=0))
+        alert("Please enter numeric value for investment and should be greater than 0");
+      if(isNaN(interest) || (interest<=0))
+      alert("Please enter numeric value for interest and should be greater than 0");
+      if(isNaN(years) || (years<=5))
+      alert("Please enter numeric value for years and should be greater than 5");      
+    }
+    else
+    {
+        document.getElementById("future_value").innerHTML = (investment*(1 + (investment*(interest))*years)).toFixed(2);
+    }
+  }
+</script>
+</head>
+
+<body>
+    <main>
+    <h1>Future Value Calculator</h1>
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label for="investment">Total Investment:</label>
+    <input type="text" id="investment"><br><br>
+    
+    <label for="rate">Annual Interest Rate:</label>
+    <input type="text" id="rate">%<br><br>
+    
+    <label for="years">Number of Years:</label>
+    <input type="text" id="years"><br><br>
+    
+    <label for="future_value">Future Value:</label>
+    <input type="text" id="future_value" Dis><br><br>
+    
+    <label>&nbsp;</label>
+    <input type="button" onclick="calculate()" value="Calculate"><br>
+    </main>
+</body>
+</html>
+
+
+
+
+sdfufff
+sefsgfbJKG
